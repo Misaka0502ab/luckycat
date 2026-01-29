@@ -4,17 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>绿色网站，绿色发财</title>
-    
-    <!-- 网页图标设置 -->
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="manifest" href="site.webmanifest">
-    <!-- 请确保你有一个 images/favicon.ico 文件，否则可以删除这行 -->
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    
+    <link rel="icon" href="https://fastly.jsdelivr.net/npm/@bootcss/v3.bootcss.com@1.0.55/favicon.ico">
     <style>
-        /* 全局居中样式 */
         body {
             text-align: center;
             font-family: Arial, sans-serif;
@@ -22,19 +13,14 @@
             margin: 0;
             padding: 20px;
         }
-        
-        input[type="text"], 
-        input[type="password"] {
+        input[type="text"], input[type="password"] {
             display: block;
-            margin: 0 auto;
-            margin-bottom: 15px;
-            padding: 8px;
+            margin: 10px auto;
+            padding: 10px;
             width: 200px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
+            border: 2px solid #4CAF50;
+            border-radius: 5px;
         }
-        
-        /* 模态框样式 */
         .modal {
             display: none;
             position: fixed;
@@ -42,142 +28,131 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
+            background-color: rgba(0,0,0,0.5);
             justify-content: center;
             align-items: center;
             z-index: 1000;
         }
-        
         .modal-content {
             background-color: white;
-            padding: 25px;
+            padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            max-width: 300px;
             text-align: center;
+            max-width: 350px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
         }
-        
         .modal-button {
             background-color: #4CAF50;
             color: white;
+            padding: 10px 25px;
             border: none;
-            padding: 10px 20px;
             border-radius: 5px;
             cursor: pointer;
-            margin-top: 15px;
             font-size: 16px;
+            margin-top: 15px;
         }
-        
-        .modal-button:hover {
-            background-color: #45a049;
-        }
-        
-        /* 计数器样式 */
-        .counter {
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 2px dashed #4CAF50;
-            color: #666;
-            font-size: 14px;
+        .visit-counter {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            display: inline-block;
         }
     </style>
 </head>
 <body>
-    <!-- 网站标题 -->
-    <h1 style="color: #ffd900;">来发财</h1>
+    <h1 style="color: #FF9800;">来发财</h1>
     
-    <!-- 发财选项 -->
-    <div>
-        <select>
-            <option value="">选择发财级别</option>
-            <option value="">发大财</option>
-            <option value="">发中财</option>
-            <option value="">发小财</option>
-        </select>
-    </div>
+    <select style="padding: 8px; margin: 15px;">
+        <option>选择发财级别</option>
+        <option>发大财</option>
+        <option>发中财</option>
+        <option>发小财</option>
+    </select>
     
-    <!-- 登录区域 -->
-    <h2>账号</h2>
-    <input type="text" placeholder="请输入账号">
+    <h3>账号</h3>
+    <input type="text" placeholder="输入账号">
     
     <h3>密码</h3>
     <input type="password" id="passwordInput" placeholder="按回车键查看余额">
     
-    <!-- 余额提示模态框 -->
     <div id="myModal" class="modal">
         <div class="modal-content">
-            <p style="font-size: 18px;">💰 你的账户余额为 <strong style="color:red;">0</strong>，哈哈哈！</p>
+            <p style="font-size: 20px;">💰 你的账户余额为 <strong style="color:red; font-size: 28px;">0</strong></p>
+            <p style="font-style: italic; color: #777;">哈哈哈！</p>
             <button class="modal-button" onclick="closeModal()">确定</button>
         </div>
     </div>
     
-    <!-- 发财图片链接 -->
-    <p>
+    <p style="margin-top: 30px;">
         <i><b>真的灵</b></i> 旺旺发财
     </p>
     
     <a href="https://www.bilibili.com/" target="_blank">
-        <img src="https://tse3-mm.cn.bing.net/th/id/OIP-C.V6Lstu8wWMfZSx0hryzLVwHaHa?r=0&rs=1&pid=ImgDetMain&cb=idpwebpc2" 
-             alt="发财了" 
-             style="width: 200px; border-radius: 10px; margin-top: 15px;">
+        <img src="https://tse3-mm.cn.bing.net/th/id/OIP-C.V6Lstu8wWMfZSx0hryzLVwHaHa?r=0&rs=1&pid=ImgDetMain&cb=idpwebpc2" alt="发财了" style="width: 200px; border-radius: 15px; margin: 20px;">
     </a>
     
-    <!-- ========== 【不蒜子】网站访问计数器 ========== -->
-    <div class="counter">
-        <!-- 引入不蒜子计数脚本 -->
-        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-        
-        <!-- 显示总访问量 -->
-        <div>
-            <span id="busuanzi_container_site_pv">
-                👁️ 本站总访问量：<strong><span id="busuanzi_value_site_pv" style="color:#4CAF50;">0</span></strong> 次
-            </span>
-        </div>
-        
-        <!-- 显示访客数 -->
-        <div>
-            <span id="busuanzi_container_site_uv">
-                👥 本站访客数：<strong><span id="busuanzi_value_site_uv" style="color:#4CAF50;">0</span></strong> 人
-            </span>
-        </div>
-        
-        <p style="font-size: 12px; color: #999; margin-top: 10px;">
-            数据由不蒜子提供 · 刷新页面看数字增长
+    <!-- ===== 核心修改部分：手动访问记录按钮 ===== -->
+    <hr style="margin: 30px auto; width: 80%;">
+    <div style="text-align: center;">
+        <button onclick="checkManualRecord()" style="padding: 12px 25px; background-color: #2196F3; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 16px;">
+            👀 手动查看访问记录
+        </button>
+        <p id="manualRecord" style="margin-top: 20px; font-size: 15px; color: #666; min-height: 60px;">
+            <!-- 记录会显示在这里 -->
         </p>
     </div>
-    <!-- ========== 计数器结束 ========== -->
+    <!-- ===== 核心修改部分结束 ===== -->
+
+    <div class="visit-counter">
+        <!-- 修复后的不蒜子计数器 -->
+        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+        <div>
+            <span id="busuanzi_container_site_pv">
+                👁️ 本站总访问量：<strong><span id="busuanzi_value_site_pv" style="color:#4CAF50;">(加载中...)</span></strong> 次
+            </span>
+        </div>
+        <div>
+            <span id="busuanzi_container_site_uv">
+                👥 本站访客数：<strong><span id="busuanzi_value_site_uv" style="color:#4CAF50;">(加载中...)</span></strong> 人
+            </span>
+        </div>
+        <p style="font-size: 12px; color: #999; margin-top: 10px;">
+            数据由不蒜子提供
+        </p>
+    </div>
     
-    <!-- 网站交互脚本 -->
     <script>
-        // 获取密码输入框和模态框
+        // 余额弹窗功能
         const passwordInput = document.getElementById('passwordInput');
         const modal = document.getElementById('myModal');
-        
-        // 按回车键打开余额提示
-        passwordInput.addEventListener('keydown', function(event) {
-            if (event.key === 'Enter') {
+        passwordInput.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') {
                 modal.style.display = 'flex';
             }
         });
-        
-        // 关闭模态框函数
         function closeModal() {
             modal.style.display = 'none';
         }
-        
-        // 点击模态框外部也可关闭
-        modal.addEventListener('click', function(event) {
-            if (event.target === modal) {
-                closeModal();
-            }
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) closeModal();
         });
         
-        // 页面加载完成后的小提示
+        // ===== 核心功能：手动访问记录 =====
+        let accessLog = [];
+        function checkManualRecord() {
+            const visitTime = new Date().toLocaleTimeString();
+            accessLog.push(`有人于 ${visitTime} 查看了本页`);
+            const recordElement = document.getElementById('manualRecord');
+            recordElement.innerHTML = `<strong>📝 近期访问记录：</strong><br>` + accessLog.join('<br>');
+            recordElement.style.color = '#333';
+        }
+        // 页面加载时自动记录一次
         window.onload = function() {
-            console.log("🎉 发财网站加载成功！");
-            console.log("💡 提示：在密码框按回车可以查看余额");
+            setTimeout(checkManualRecord, 300);
         };
+        // ===== 核心功能结束 =====
     </script>
 </body>
 </html>
-
